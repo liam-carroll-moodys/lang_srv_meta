@@ -1,0 +1,18 @@
+[Unit]
+Description=Translation Service
+After=network.target
+
+[Service]
+Type=simple
+User=nadmin
+Group=amc
+WorkingDirectory=/nwsys/translation_srv
+ExecStart=/nwsys/translation_srv/scripts/run.sh
+Restart=on-failure
+RestartSec=5
+StandardOutput=syslog
+StandardError=syslog
+SyslogIdentifier=translation-service
+
+[Install]
+WantedBy=multi-user.target

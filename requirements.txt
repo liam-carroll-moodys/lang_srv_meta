@@ -1,0 +1,5 @@
+flask
+nltk
+ctranslate2
+sentencepiece
+gunicorn
